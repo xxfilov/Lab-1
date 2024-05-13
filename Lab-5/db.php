@@ -24,7 +24,7 @@ function getPostsFromDB(mysqli $connect): mysqli_result {
 }
 
 function uploadPostToDB(mysqli $connect, $postContent) {
-    $sql_query = "INSERT INTO post (post_id, title, subtitle, author, post_alt, author_url, publish_date, image_url, featured) VALUES ('$postContent[post_id]', '$postContent[title]','$postContent[subtitle]','$postContent[author]','$postContent[post_alt]','$postContent[author_url]','$postContent[publish_date]','$postContent[image_url]','$postContent[featured]' )";
-    $connect->query($sql_query);
-    }
+  $sql_query = "INSERT INTO post (title, subtitle, author, post_alt, author_url, publish_date, image_url, content, image_content, featured) VALUES ('$postContent[title]','$postContent[subtitle]','$postContent[author]','$postContent[post_alt]','$postContent[author_url]','$postContent[publish_date]','$postContent[image_url]','$postContent[content]','$postContent[image_content]','$postContent[featured]' )";
+  $connect->query($sql_query);
+  }
 ?>
